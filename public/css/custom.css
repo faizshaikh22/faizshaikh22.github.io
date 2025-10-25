@@ -1,0 +1,64 @@
+:root {
+  --neon-red: #ff0040;
+  --neon-red-glow: rgba(255, 0, 64, 0.5);
+  --dark-bg: #0a0a0a;
+  --darker-bg: #050505;
+}
+
+body {
+  background: var(--dark-bg);
+}
+
+a {
+  color: var(--neon-red);
+  text-shadow: 0 0 5px var(--neon-red-glow);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ff3366;
+  text-shadow: 0 0 10px var(--neon-red-glow), 0 0 20px var(--neon-red-glow);
+}
+
+.post-header h1.title {
+  color: var(--neon-red);
+  text-shadow: 0 0 10px var(--neon-red-glow);
+}
+
+.nav a {
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  border-bottom-color: var(--neon-red);
+}
+
+code {
+  background: var(--darker-bg);
+  border: 1px solid var(--neon-red);
+  color: var(--neon-red);
+}
+
+pre {
+  background: var(--darker-bg);
+  border-left: 3px solid var(--neon-red);
+  box-shadow: 0 0 10px var(--neon-red-glow);
+}
+
+blockquote {
+  border-left: 3px solid var(--neon-red);
+  box-shadow: 0 0 5px var(--neon-red-glow);
+}
+
+.post-tags a {
+  background: var(--darker-bg);
+  border: 1px solid var(--neon-red);
+  color: var(--neon-red);
+}
+
+.post-tags a:hover {
+  background: var(--neon-red);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px var(--neon-red-glow);
+}
+

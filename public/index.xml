@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faiz Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Faiz Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Oct 2025 22:10:03 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Red Wheelbarrow</title>
+      <link>http://localhost:1313/posts/red-wheelbarrow/</link>
+      <pubDate>Sat, 25 Oct 2025 22:10:03 +0530</pubDate>
+      <guid>http://localhost:1313/posts/red-wheelbarrow/</guid>
+      <description>&lt;p&gt;&lt;em&gt;by William Carlos Williams&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;so much depends&lt;br&gt;&#xA;upon&lt;/p&gt;&#xA;&lt;p&gt;a red wheel&lt;br&gt;&#xA;barrow&lt;/p&gt;&#xA;&lt;p&gt;glazed with rain&lt;br&gt;&#xA;water&lt;/p&gt;&#xA;&lt;p&gt;beside the white&lt;br&gt;&#xA;chickens&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
