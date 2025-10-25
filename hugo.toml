@@ -1,4 +1,4 @@
-baseURL = 'https://faiz.github.io/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'Faiz Blog'
 theme = "ezhil"
