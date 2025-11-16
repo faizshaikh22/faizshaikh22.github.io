@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Faiz Blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>//localhost:1313/posts/</link>
     <description>Recent content in Posts on Faiz Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Oct 2025 22:10:03 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Nov 2025 21:37:03 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tome Forge</title>
+      <link>//localhost:1313/posts/tome-forge/</link>
+      <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
+      <guid>//localhost:1313/posts/tome-forge/</guid>
+      <description>&lt;h1 id=&#34;tome-forge-teaching-llms-to-think-like-philosophers&#34;&gt;Tome Forge: Teaching LLMs to Think Like Philosophers&lt;/h1&gt;&#xA;&lt;h2 id=&#34;the-problem-and-how-i-found-it&#34;&gt;The Problem (And How I Found It)&lt;/h2&gt;&#xA;&lt;p&gt;I thought I had a clever prompt. Ask a language model to roleplay as Nietzsche, then test it with a simple question: Thucydides or Plato?&lt;/p&gt;&#xA;&lt;p&gt;Any Nietzsche reader knows the answer before they finish the question. He hated Plato. Called him a coward. His own words: &lt;em&gt;&amp;ldquo;My recreation, my preference, my cure from all Platonism has always been Thucydides&amp;hellip; Courage in the face of reality distinguishes a man like Thucydides from Plato: Plato is a coward before reality, consequently he flees into the ideal.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Red Wheelbarrow</title>
-      <link>http://localhost:1313/posts/red-wheelbarrow/</link>
+      <link>//localhost:1313/posts/red-wheelbarrow/</link>
       <pubDate>Sat, 25 Oct 2025 22:10:03 +0530</pubDate>
-      <guid>http://localhost:1313/posts/red-wheelbarrow/</guid>
+      <guid>//localhost:1313/posts/red-wheelbarrow/</guid>
       <description>&lt;p&gt;&lt;em&gt;by William Carlos Williams&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;so much depends&lt;br&gt;&#xA;upon&lt;/p&gt;&#xA;&lt;p&gt;a red wheel&lt;br&gt;&#xA;barrow&lt;/p&gt;&#xA;&lt;p&gt;glazed with rain&lt;br&gt;&#xA;water&lt;/p&gt;&#xA;&lt;p&gt;beside the white&lt;br&gt;&#xA;chickens&lt;/p&gt;</description>
     </item>
   </channel>

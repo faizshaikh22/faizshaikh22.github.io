@@ -6,3 +6,4 @@ theme = "ezhil"
 [params]
   mode = "dark"
   customDarkCSS = "css/custom.css"
+  favicon = "icons/logo.jpg"
