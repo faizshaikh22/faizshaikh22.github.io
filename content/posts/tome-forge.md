@@ -2,6 +2,7 @@
 date = '2025-11-16T21:37:03+05:30'
 draft = false
 title = 'Tome Forge'
+tags = ["llm", "ai", "philosophy", "nietzsche", "fine-tuning", "data-engineering"]
 +++
 
 # Tome Forge: Teaching LLMs to Think Like Philosophers

@@ -48,7 +48,23 @@ buildExpired = false
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/"
+    url = "https://github.com/faizshaikh22"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/faiz-shaikh-142936136/"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:faiz.shaikh0600@gmail.com"
+
+  [[params.socialIcons]]
+    name = "x"
+    url = "https://x.com/phase_shake"
+
+  [[params.socialIcons]]
+    name = "huggingface"
+    url = "https://huggingface.co/phase-shake"
 
 [params.cover]
   hidden = true

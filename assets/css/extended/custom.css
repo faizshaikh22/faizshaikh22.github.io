@@ -1,53 +1,53 @@
 /* Red Wheelbarrow BBQ Theme for PaperMod */
 /* Fonts */
 :root {
-  --font-heading: 'Bebas Neue', sans-serif;
-  --font-body: 'Roboto Mono', monospace;
-  
-  /* BBQ Red - used in both modes */
-  --bbq-red: #8b0000;
-  --bbq-red-hover: #a00000;
-  
-  /* Neon Red - dark mode accents */
-  --neon-red: #ff0040;
-  --neon-red-glow: rgba(255, 0, 64, 0.5);
-  --neon-red-soft: #ff3366;
-  
-  /* Dark mode base colors */
-  --dark-bg: #0a0a0a;
-  --darker-bg: #050505;
+    --font-heading: "Bebas Neue", sans-serif;
+    --font-body: "Roboto Mono", monospace;
+
+    /* BBQ Red - used in both modes */
+    --bbq-red: #8b0000;
+    --bbq-red-hover: #a00000;
+
+    /* Neon Red - dark mode accents */
+    --neon-red: #ff0040;
+    --neon-red-glow: rgba(255, 0, 64, 0.5);
+    --neon-red-soft: #ff3366;
+
+    /* Dark mode base colors */
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
 }
 
 /* ========================================
    LIGHT MODE (Red Wheelbarrow BBQ Menu style)
    ======================================== */
 :root {
-  --theme: #faf8f5;
-  --entry: #ffffff;
-  --primary: var(--bbq-red);
-  --secondary: #555555;
-  --tertiary: #f0ebe5;
-  --content: #1a1a1a;
-  --code-bg: #f5f0ea;
-  --border: var(--bbq-red);
+    --theme: #faf8f5;
+    --entry: #ffffff;
+    --primary: var(--bbq-red);
+    --secondary: #555555;
+    --tertiary: #f0ebe5;
+    --content: #1a1a1a;
+    --code-bg: #f5f0ea;
+    --border: var(--bbq-red);
 }
 
 /* Light mode body */
 body {
-  font-family: var(--font-body);
-  letter-spacing: -0.5px;
+    font-family: var(--font-body);
+    letter-spacing: -0.5px;
 }
 
 /* Light mode links - no glow, just clean red */
 a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: all 0.2s ease;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-  color: var(--bbq-red-hover);
-  text-decoration: underline;
+    color: var(--bbq-red-hover);
+    text-decoration: underline;
 }
 
 /* ========================================
@@ -55,15 +55,16 @@ a:hover {
    PaperMod toggles theme via: html[data-theme="dark"]
    (not a .dark class), so we target that explicitly.
    ======================================== */
-html[data-theme="dark"], .dark {
-  --theme: #0a0a0a;
-  --entry: #0a0a0a;
-  --primary: #ff0040;
-  --secondary: #888888;
-  --tertiary: #0a0a0a;
-  --content: #cccccc;
-  --code-bg: #050505;
-  --border: #ff0040;
+html[data-theme="dark"],
+.dark {
+    --theme: #0a0a0a;
+    --entry: #0a0a0a;
+    --primary: #ff0040;
+    --secondary: #888888;
+    --tertiary: #0a0a0a;
+    --content: #cccccc;
+    --code-bg: #050505;
+    --border: #ff0040;
 }
 
 /* Force pitch black background everywhere in dark mode */
@@ -83,22 +84,24 @@ html[data-theme="dark"] .terms-tags,
 .dark details,
 .dark .archive-posts,
 .dark .terms-tags {
-  background-color: #0a0a0a !important;
+    background-color: #0a0a0a !important;
 }
 
 /* Dark mode links - neon glow */
 html[data-theme="dark"] a,
 .dark a {
-  color: #ff0040;
-  text-shadow: 0 0 5px var(--neon-red-glow);
-  text-decoration: none;
+    color: #ff0040;
+    text-shadow: 0 0 5px var(--neon-red-glow);
+    text-decoration: none;
 }
 
 html[data-theme="dark"] a:hover,
 .dark a:hover {
-  color: #ff3366;
-  text-shadow: 0 0 10px var(--neon-red-glow), 0 0 20px var(--neon-red-glow);
-  text-decoration: none;
+    color: #ff3366;
+    text-shadow:
+        0 0 10px var(--neon-red-glow),
+        0 0 20px var(--neon-red-glow);
+    text-decoration: none;
 }
 
 /* Dark mode headlines - RED */
@@ -108,8 +111,13 @@ html[data-theme="dark"] h3,
 html[data-theme="dark"] h4,
 html[data-theme="dark"] h5,
 html[data-theme="dark"] h6,
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: #ff0040 !important;
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: #ff0040 !important;
 }
 
 /* Homepage title and info */
@@ -119,15 +127,15 @@ html[data-theme="dark"] .home-info h1,
 .dark .first-entry .entry-header h1,
 .dark .home-info .entry-title,
 .dark .home-info h1 {
-  color: #ff0040 !important;
-  text-shadow: 0 0 15px var(--neon-red-glow);
+    color: #ff0040 !important;
+    text-shadow: 0 0 15px var(--neon-red-glow);
 }
 
 html[data-theme="dark"] .home-info .entry-content,
 html[data-theme="dark"] .home-info p,
 .dark .home-info .entry-content,
 .dark .home-info p {
-  color: #cccccc;
+    color: #cccccc;
 }
 
 /* Logo */
@@ -135,277 +143,466 @@ html[data-theme="dark"] .logo,
 html[data-theme="dark"] .logo a,
 .dark .logo,
 .dark .logo a {
-  color: #ff0040 !important;
-  text-shadow: 0 0 10px var(--neon-red-glow);
+    color: #ff0040 !important;
+    text-shadow: 0 0 10px var(--neon-red-glow);
 }
 
 /* Nav menu */
 html[data-theme="dark"] #menu a,
 .dark #menu a {
-  color: #ff0040 !important;
+    color: #ff0040 !important;
 }
 
 /* ========================================
    SHARED TYPOGRAPHY
    ======================================== */
-h1, h2, h3, h4, h5, h6, 
-.logo, .post-title, .entry-title, #menu {
-  font-family: var(--font-heading);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo,
+.post-title,
+.entry-title,
+#menu {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* Post titles */
 .post-title {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 html[data-theme="dark"] .post-title,
 .dark .post-title {
-  text-shadow: 0 0 10px var(--neon-red-glow);
+    text-shadow: 0 0 10px var(--neon-red-glow);
 }
 
 .post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 /* ========================================
    CODE BLOCKS
    ======================================== */
 .highlight {
-  background: var(--code-bg) !important;
-  border-left: 3px solid var(--primary);
-  border-radius: 4px;
+    background: var(--code-bg) !important;
+    border-left: 3px solid var(--primary);
+    border-radius: 4px;
 }
 
 html[data-theme="dark"] .highlight,
 .dark .highlight {
-  box-shadow: 0 0 10px var(--neon-red-glow);
+    box-shadow: 0 0 10px var(--neon-red-glow);
 }
 
 .highlight pre {
-  background: var(--code-bg) !important;
+    background: var(--code-bg) !important;
 }
 
 /* Inline code */
 code {
-  background: var(--code-bg);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  padding: 2px 6px;
-  border-radius: 3px;
+    background: var(--code-bg);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 2px 6px;
+    border-radius: 3px;
 }
 
 pre code {
-  border: none;
-  color: inherit;
-  padding: 0;
-  background: transparent;
+    border: none;
+    color: inherit;
+    padding: 0;
+    background: transparent;
 }
 
 /* Copy button */
 .copy-code {
-  background: var(--code-bg) !important;
-  border: 1px solid var(--primary) !important;
-  color: var(--primary) !important;
+    background: var(--code-bg) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
 }
 
 .copy-code:hover {
-  background: var(--primary) !important;
-  color: var(--theme) !important;
+    background: var(--primary) !important;
+    color: var(--theme) !important;
 }
 
 /* ========================================
    TABLE OF CONTENTS
    ======================================== */
 .toc {
-  background: var(--tertiary);
-  border: 1px solid var(--border);
-  border-radius: 6px;
+    background: var(--tertiary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
 }
 
 .toc a {
-  color: var(--secondary);
+    color: var(--secondary);
 }
 
 .toc a:hover {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 html[data-theme="dark"] .toc a:hover,
 .dark .toc a:hover {
-  text-shadow: none;
+    text-shadow: none;
 }
 
 /* ========================================
    BLOCKQUOTES
    ======================================== */
 blockquote {
-  border-left: 3px solid var(--primary);
-  background: var(--tertiary);
-  padding: 1rem;
-  margin: 1rem 0;
+    border-left: 3px solid var(--primary);
+    background: var(--tertiary);
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
 html[data-theme="dark"] blockquote,
 .dark blockquote {
-  box-shadow: 0 0 5px var(--neon-red-glow);
+    box-shadow: 0 0 5px var(--neon-red-glow);
 }
 
 /* ========================================
    TAGS
    ======================================== */
 .post-tags a {
-  background: var(--tertiary);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  transition: all 0.3s ease;
+    background: var(--tertiary);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    transition: all 0.3s ease;
+    opacity: 0.9;
 }
 
 .post-tags a:hover {
-  background: var(--primary);
-  color: var(--theme);
-  text-decoration: none;
+    background: var(--primary);
+    color: var(--theme);
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* Specific Dark Mode Overrides for Tags */
+html[data-theme="dark"] .post-tags a,
+.dark .post-tags a {
+    background: rgba(
+        255,
+        0,
+        64,
+        0.1
+    ) !important; /* Slight red tint, mostly transparent/black */
+    border: 1px solid #ff0040 !important;
+    color: #ff0040 !important;
+    box-shadow: 0 0 5px rgba(255, 0, 64, 0.2); /* Subtle glow */
 }
 
 html[data-theme="dark"] .post-tags a:hover,
 .dark .post-tags a:hover {
-  box-shadow: 0 0 15px var(--neon-red-glow);
-  text-shadow: none;
+    background: #ff0040 !important;
+    color: #000000 !important;
+    box-shadow:
+        0 0 15px var(--neon-red-glow),
+        0 0 30px var(--neon-red-glow);
+    text-shadow: none;
+}
+
+/* Tag List Page (Terms) Styling */
+.terms-tags li {
+    margin: 5px !important; /* Override theme default 10px */
+}
+
+.terms-tags a {
+    background: var(--tertiary);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 8px 16px; /* Better padding balance */
+    border-radius: 4px;
+    display: inline-flex !important; /* Fix alignment */
+    align-items: center;
+    gap: 8px; /* Space between text and count */
+    transition: all 0.3s ease;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Fix the count styling */
+.terms-tags a sup {
+    position: static; /* Remove superscript offset */
+    font-size: 0.8em;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+.terms-tags a strong {
+    font-weight: normal; /* Remove bold from the count wrapper */
+}
+
+html[data-theme="dark"] .terms-tags a,
+.dark .terms-tags a {
+    background: rgba(255, 0, 64, 0.05) !important;
+    border-color: #ff0040 !important;
+    color: #ff0040 !important;
+}
+
+.terms-tags a:hover {
+    background: var(--primary) !important;
+    color: var(--theme) !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+html[data-theme="dark"] .terms-tags a:hover,
+.dark .terms-tags a:hover {
+    background: var(--primary) !important;
+    color: #000000 !important; /* Ensure text is readable on neon red */
+    box-shadow:
+        0 0 15px var(--neon-red-glow),
+        0 0 30px var(--neon-red-glow);
+    text-shadow: none;
 }
 
 /* ========================================
    POST ENTRIES (Homepage cards)
    ======================================== */
 .post-entry {
-  border: 1px solid var(--primary);
-  background: var(--entry);
-  transition: all 0.3s ease;
+    border: 1px solid var(--primary);
+    background: var(--entry);
+    transition: all 0.3s ease;
 }
 
 .post-entry:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.15);
 }
 
 html[data-theme="dark"] .post-entry,
 .dark .post-entry {
-  background: #0a0a0a !important;
-  border: 1px solid #ff0040;
+    background: #0a0a0a !important;
+    border: 1px solid #ff0040;
 }
 
 html[data-theme="dark"] .post-entry:hover,
 .dark .post-entry:hover {
-  box-shadow: 0 0 15px var(--neon-red-glow);
+    box-shadow: 0 0 15px var(--neon-red-glow);
 }
 
 html[data-theme="dark"] .post-entry .entry-title,
 .dark .post-entry .entry-title {
-  color: #ff0040 !important;
+    color: #ff0040 !important;
 }
 
 html[data-theme="dark"] .post-entry .entry-content,
 .dark .post-entry .entry-content {
-  color: #cccccc;
+    color: #cccccc;
 }
 
 /* ========================================
    SEARCH
    ======================================== */
 #searchbox {
-  background: var(--entry);
-  border: 1px solid var(--primary);
-  color: var(--content);
+    background: var(--entry);
+    border: 1px solid var(--primary);
+    color: var(--content);
 }
 
 #searchbox:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary);
 }
 
 html[data-theme="dark"] #searchbox:focus,
 .dark #searchbox:focus {
-  box-shadow: 0 0 10px var(--neon-red-glow);
+    box-shadow: 0 0 10px var(--neon-red-glow);
 }
 
 /* ========================================
    PAGINATION
    ======================================== */
 .pagination a {
-  border: 1px solid var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .pagination a:hover {
-  background: var(--primary);
-  color: var(--theme);
-  text-decoration: none;
+    background: var(--primary);
+    color: var(--theme);
+    text-decoration: none;
 }
 
 /* ========================================
    NAVIGATION & HEADER
    ======================================== */
-.nav a, #menu a {
-  color: var(--primary);
+/* Make header persistent */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--theme);
+    transition: background 0.3s;
+    /* Optional: separate header from content slightly */
+    box-shadow: 0 1px 0 var(--tertiary);
+}
+
+/* Ensure dark mode header has correct background */
+html[data-theme="dark"] .header,
+.dark .header {
+    background: #0a0a0a;
+    box-shadow: 0 1px 0 #333;
+}
+
+.nav a,
+#menu a {
+    color: var(--primary);
 }
 
 #menu a.active {
-  border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
 }
 
 html[data-theme="dark"] #menu a.active,
 .dark #menu a.active {
-  color: var(--neon-red-soft);
+    color: var(--neon-red-soft);
 }
 
 .logo a {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 html[data-theme="dark"] .logo a,
 .dark .logo a {
-  text-shadow: 0 0 10px var(--neon-red-glow);
+    text-shadow: 0 0 10px var(--neon-red-glow);
 }
 
 /* Breadcrumbs */
 .breadcrumbs a {
-  color: var(--primary);
+    color: var(--primary);
+}
+
+/* ========================================
+   PAGINATION (Overhaul)
+   ======================================== */
+/* Remove default container styling */
+.paginav {
+    background: transparent !important;
+    border: none !important;
+    gap: 20px; /* Separated buttons */
+    margin-top: 40px;
+}
+
+/* Style the links as buttons */
+.paginav a {
+    background: var(--entry);
+    border: 1px solid var(--primary);
+    border-radius: 8px !important;
+    padding: 15px 20px;
+    flex: 1; /* Equal width */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0; /* Prevent flex overflow */
+}
+
+/* Hover state */
+.paginav a:hover {
+    background: var(--primary);
+    color: var(--theme);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+/* Title Styling inside buttons */
+.paginav .title {
+    color: var(--secondary);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.paginav a:hover .title {
+    color: var(--theme);
+    opacity: 0.9;
+}
+
+/* Dark mode pagination */
+html[data-theme="dark"] .paginav a,
+.dark .paginav a {
+    background: #0a0a0a;
+    border-color: #ff0040;
+}
+
+html[data-theme="dark"] .paginav a:hover,
+.dark .paginav a:hover {
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--neon-red-glow);
 }
 
 /* ========================================
    FOOTER
    ======================================== */
 .footer a {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 /* ========================================
    SCROLL TO TOP
    ======================================== */
 #top-link {
-  background: var(--entry);
-  border: 1px solid var(--primary);
-  color: var(--primary);
+    background: var(--entry);
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 #top-link:hover {
-  background: var(--primary);
-  color: var(--theme);
+    background: var(--primary);
+    color: var(--theme);
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--theme);
+}
+
+/* WebKit */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 6px;
+    border: 3px solid var(--theme);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
 }
 
 /* ========================================
    ARCHIVE
    ======================================== */
 .archive-year {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 /* ========================================
    SELECTION HIGHLIGHT
    ======================================== */
 ::selection {
-  background: var(--primary);
-  color: var(--theme);
+    background: var(--primary);
+    color: var(--theme);
 }

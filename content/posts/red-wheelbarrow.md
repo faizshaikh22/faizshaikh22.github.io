@@ -2,6 +2,7 @@
 date = '2025-10-25T22:10:03+05:30'
 draft = false
 title = 'The Red Wheelbarrow'
+tags = ["poetry", "william-carlos-williams", "imagism"]
 +++
 
 *by William Carlos Williams*
