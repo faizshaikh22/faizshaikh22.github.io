@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Faiz Blog</title>
-    <link>http://localhost:56057/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Faiz Blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Nov 2025 21:37:03 +0530</lastBuildDate>
-    <atom:link href="http://localhost:56057/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
-      <link>http://localhost:56057/tags/ai/</link>
+      <link>http://localhost:1313/tags/ai/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/ai/</guid>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Data-Engineering</title>
-      <link>http://localhost:56057/tags/data-engineering/</link>
+      <link>http://localhost:1313/tags/data-engineering/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/data-engineering/</guid>
+      <guid>http://localhost:1313/tags/data-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Fine-Tuning</title>
-      <link>http://localhost:56057/tags/fine-tuning/</link>
+      <link>http://localhost:1313/tags/fine-tuning/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/fine-tuning/</guid>
+      <guid>http://localhost:1313/tags/fine-tuning/</guid>
       <description></description>
     </item>
     <item>
       <title>Llm</title>
-      <link>http://localhost:56057/tags/llm/</link>
+      <link>http://localhost:1313/tags/llm/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/llm/</guid>
+      <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>Nietzsche</title>
-      <link>http://localhost:56057/tags/nietzsche/</link>
+      <link>http://localhost:1313/tags/nietzsche/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/nietzsche/</guid>
+      <guid>http://localhost:1313/tags/nietzsche/</guid>
       <description></description>
     </item>
     <item>
       <title>Philosophy</title>
-      <link>http://localhost:56057/tags/philosophy/</link>
+      <link>http://localhost:1313/tags/philosophy/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/philosophy/</guid>
+      <guid>http://localhost:1313/tags/philosophy/</guid>
       <description></description>
     </item>
     <item>
       <title>Imagism</title>
-      <link>http://localhost:56057/tags/imagism/</link>
+      <link>http://localhost:1313/tags/imagism/</link>
       <pubDate>Sat, 25 Oct 2025 22:10:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/imagism/</guid>
+      <guid>http://localhost:1313/tags/imagism/</guid>
       <description></description>
     </item>
     <item>
       <title>Poetry</title>
-      <link>http://localhost:56057/tags/poetry/</link>
+      <link>http://localhost:1313/tags/poetry/</link>
       <pubDate>Sat, 25 Oct 2025 22:10:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/poetry/</guid>
+      <guid>http://localhost:1313/tags/poetry/</guid>
       <description></description>
     </item>
     <item>
       <title>William-Carlos-Williams</title>
-      <link>http://localhost:56057/tags/william-carlos-williams/</link>
+      <link>http://localhost:1313/tags/william-carlos-williams/</link>
       <pubDate>Sat, 25 Oct 2025 22:10:03 +0530</pubDate>
-      <guid>http://localhost:56057/tags/william-carlos-williams/</guid>
+      <guid>http://localhost:1313/tags/william-carlos-williams/</guid>
       <description></description>
     </item>
   </channel>
