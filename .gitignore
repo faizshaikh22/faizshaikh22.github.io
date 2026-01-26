@@ -2,3 +2,5 @@ public/
 resources/
 .hugo_build.lock
 
+.cursor
+GOOGLE_SHEETS_CMS_SETUP.md

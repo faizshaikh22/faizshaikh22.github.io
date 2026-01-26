@@ -7,107 +7,122 @@ tags = ["llm", "ai", "philosophy", "nietzsche", "fine-tuning", "data-engineering
 
 # Tome Forge: Teaching LLMs to Think Like Philosophers
 
-## The Problem (And How I Found It)
+## The problem (and how I tripped over it)
 
-I thought I had a clever prompt. Ask a language model to roleplay as Nietzsche, then test it with a simple question: Thucydides or Plato?
+I thought I had a clever prompt. Tell a model to roleplay as Nietzsche, then poke it with a softball: Thucydides or Plato?
 
-Any Nietzsche reader knows the answer before they finish the question. He hated Plato. Called him a coward. His own words: *"My recreation, my preference, my cure from all Platonism has always been Thucydides... Courage in the face of reality distinguishes a man like Thucydides from Plato: Plato is a coward before reality, consequently he flees into the ideal."*
+If you've read even a little Nietzsche, you can answer before you finish the question. He loathed Plato. He called him a coward. In his own words: *"My recreation, my preference, my cure from all Platonism has always been Thucydides... Courage in the face of reality distinguishes a man like Thucydides from Plato: Plato is a coward before reality, consequently he flees into the ideal."*
 
-The model hedged. Gave me both sides. Produced careful, neutral analysis.
+The model hedged. It gave me both sides. It sounded like a careful referee.
 
-It had read the passage. Could quote it if I asked. But when I needed it to *think* as Nietzsche, to *choose* as Nietzsche, it gave me a Wikipedia article written by committee.
+It clearly "knew" the passage. It could quote it on demand. But when I needed it to *pick* as Nietzsche would pick, it turned into a Wikipedia page with manners.
 
-This is the problem: models learn to explain thinkers. They don't learn to inhabit them.
+That's the gap I kept running into: models learn to explain thinkers; they don't learn to inhabit them.
 
-After fine-tuning on 4,500 Q&A pairs built with what I'm calling Tome Forge, the same model answered:
+After fine-tuning on 4,500 Q&A pairs built with what I'm calling Tome Forge, the same base model answered:
 
 *"Ah, my dear friend! Do you truly have time for my playful game to divide human thought? I have shown you in Thucydides how power works, in the rise and decay of cities. Plato only tells you that this is 'bad' which is a sickly morality, not a force to be fought or embraced. Where Thucydides lays the tools you may march over the corpses of men who rise as lions, what will Plato give you? His gilded cage? Rise your hand if you care about conquering, sit if you want comfort. Choose with your stomach, not your head."*
 
-The difference isn't knowledge. The difference is stance. Voice. The ability to take a position and argue from it, not just describe it.
+The difference isn't knowledge. It's stance: voice, commitments, the willingness to take a side and argue from inside it.
 
-That gap—between knowing about a thinker and thinking like them—became the problem I couldn't stop thinking about.
+That gap (knowing about a thinker vs thinking like them) became the problem I couldn't drop.
 
-## Let's Get the Negatives Out First
+## The obvious approach (and why it bothered me)
 
-The initial plan was stupidly simple: generate 10,000 Q&A pairs from Nietzsche's texts. More data equals better model. Scale up. Done.
+The initial plan was stupidly simple: generate 10,000 Q&A pairs from Nietzsche and call it a day. More data, better model, ship it.
 
-But the question nagged: would 10,000 pairs actually capture what makes Nietzsche sound like Nietzsche?
+But I couldn't stop wondering if 10,000 pairs would mostly teach "Nietzsche trivia" and polite summarization, not Nietzsche's *moves*.
 
-And worse: what works for Nietzsche—aphoristic, fragmentary, constantly provocative—wouldn't work for Dostoevsky. His thinking happens through character consciousness, through dialogue, through psychological development. You can't reduce that to propositional Q&A and expect to capture how he thinks.
+And worse, "just do Q&A" doesn't generalize across writers.
 
-Same with Kant. His architecture is systematic. Everything connects to everything else through definition and logical structure. A pile of Q&A pairs misses the systematic nature entirely.
+Dostoevsky thinks through characters and dialogue and a slow build of consciousness. Kant thinks through definitions and architecture: one concept locks into another. A big pile of disconnected questions risks flattening both.
 
-There's no structure to the naive approach. Just volume. I found myself hunting for something that felt right, and that created uneasiness. Maybe volume would eventually work, but I couldn't shake the feeling I was developing a data generation technique more than I was capturing how philosophers actually think.
+So the naive approach felt like I was building a data factory, not capturing how philosophers actually think.
 
-## The Good (Or: The Speculative Part)
+## The idea that finally clicked
 
-For me, a breakthrough came from asking a different question: What makes a dataset great?
+The question that helped was boring on the surface: what makes a dataset *good*?
 
-A great dataset reveals something about thinking that I was unaware of. And the answer came from memory.
+The answer I kept coming back to was memory.
 
-When you finish reading a book—say, 100,000 words—years later you remember maybe 500. Not random words. The striking images. The core arguments. The emotional texture. The way the author moved from premise to conclusion. The architecture of how everything fit together.
+You finish a book (say 100,000 words) and, years later, you don't remember most of it. You remember a handful of images, a few core arguments, the vibe, and the way the author gets from A to B. You remember shape.
 
-**Essence isn't what's in a book. It's what survives compression in human memory.**
+Essence isn't "everything in the book." It's what survives compression in a reader's head.
 
-This reframed everything. I wasn't trying to capture all of Nietzsche. I was trying to capture what a thoughtful reader would remember, and more importantly, *how* they would remember it.
+So I stopped trying to "capture all of Nietzsche" and started trying to capture what a good reader keeps, and how they keep it.
 
-Different types of memory compress differently:
-- You remember striking passages (episodic memory) — [see example](#episodic-layer)
-- You remember core concepts (semantic memory) — [see example](#semantic-layer)
-- You remember how someone argues (procedural memory) — [see example](#procedural-layer)
-- You remember emotional texture (affective memory) — [see example](#emotional-layer)
-- You remember how parts fit together (structural memory) — [see example](#structural-layer)
+Different kinds of memory compress differently:
+- Striking passages (episodic memory) - [see example](#episodic-layer)
+- Core concepts (semantic memory) - [see example](#semantic-layer)
+- Argument moves (procedural memory) - [see example](#procedural-layer)
+- Emotional texture (affective memory) - [see example](#emotional-layer)
+- How parts fit together (structural memory) - [see example](#structural-layer)
 
-A good dataset should train all five types of memory, not just one.
+A good dataset should train all of that, not just definitions.
 
-## The Framework That Emerged
+## The five-layer scheme
 
-This led to five question layers, each targeting a different way of remembering and engaging:
+That framing pushed me into five question layers. The percentages are what I ended up using for Nietzsche (not commandments):
 
-**Semantic Layer (20%)** - The straight-A student who always has the right definition.
-"Wait, Nietzsche claims that Euripides killed tragedy by bringing the audience onto the stage—but wasn't that just making art more democratic?"
+### Semantic layer (20%)
 
-These challenge claims, demand clarification. Foundation work. But a model trained only on these becomes an explainer, not a thinker.
+The straight-A student question: definitions, clarifications, "wait, how can he say X?"
 
-**Episodic Layer (15%)** - The friend who only remembers the one scene where everything went to hell.
-"That image of Socrates as 'the first theoretical man' who 'dug an abyss between knowledge and art'—wow, that's haunting."
+"Wait, Nietzsche claims that Euripides killed tragedy by bringing the audience onto the stage - but wasn't that just making art more democratic?"
 
-Philosophy isn't just arguments. It's striking images. Memorable metaphors. Rhetorical flourishes. These teach the model what makes an idea vivid.
+Useful foundation. But if you train mostly on this, you get a great explainer and a terrible philosopher.
 
-**Procedural Layer (20%)** - The guy who can reconstruct your whole argument just from its skeleton.
+### Episodic layer (15%)
+
+The thing you remember because it hit you: images, metaphors, the line that sticks.
+
+"That image of Socrates as 'the first theoretical man' who 'dug an abyss between knowledge and art' - wow, that's haunting."
+
+This teaches vividness, not just correctness.
+
+### Procedural layer (20%)
+
+The "show me the joints" questions: how does he get from premise to conclusion, where's the leap, what's the missing step?
+
 "How does he jump from 'Euripides used reason' to 'Euripides destroyed the unconscious creative force'? That's a huge leap."
 
-This is where reasoning happens. Tracing logical moves. Connecting premises to conclusions. You can't fake this by pattern-matching.
+This is where reasoning lives. You don't get it by pattern-matching the tone.
 
-**Emotional Layer (15%)** - The part of you that just says: 'this makes me uneasy.'
+### Emotional layer (15%)
+
+The reaction questions: unease, annoyance, attraction, disgust. Nietzsche is hard to read if you refuse to feel anything.
+
 "Why does this feel like watching someone blame the Enlightenment for everything wrong with the world?"
 
-Philosophy provokes. Nietzsche makes you uncomfortable. Models that only explain ideas clinically have missed something essential.
+Models that only do "neutral analysis" miss a big part of why Nietzsche works at all.
 
-**Structural Layer (15%)** - The architect that sees how all the chapters lean on each other.
+### Structural layer (15%)
+
+The "where does this sit in the whole book?" questions.
+
 "How does this chapter fit with the book's overall argument? Is the whole book just building to 'and therefore, Socrates ruined everything'?"
 
-Individual arguments exist within larger architectures. Facts versus systems.
+Arguments don't only live inside paragraphs; they live inside a book's structure.
 
-The remaining percentage: personal and meta-level questions. Confusion. Contemporary relevance. Philosophical uncertainty. These keep the dataset grounded in how real readers actually engage with texts, not academic artifice.
+The remaining percentage went to personal/meta questions: confusion, objections, contemporary relevance. The stuff real readers actually ask, not the stuff a syllabus forces.
 
-## What The Data Actually Looks Like
+## What the data actually looks like
 
 I've included full JSON examples from each layer in the appendix below. Each entry has:
 - The question
 - Three thinking components (question analysis, textual grounding, reasoning approach)
 - The answer in Nietzsche's voice
 
-The thinking components were my attempt to force quality at generation time. Before the model could answer, it had to:
+Those "thinking" fields were my way of forcing quality at generation time. Before the model could answer, it had to:
 1. Interpret what the reader is really asking
 2. Identify specific passages from the chapter that inform the answer
 3. Articulate an argumentative strategy
 
 These fields materially improved dataset quality. They enforced grounding in specific chapter text rather than generic knowledge. They forced genuine reasoning traces rather than empty formalism.
 
-Practically: we trained the fine-tuned models on Q&A only, not on the thinking fields. Data volume wasn't sufficient for models to reliably reproduce the full thinking traces. But the fields improved the training data itself, which is what mattered.
+Practically: I trained the fine-tuned models on Q&A only, not on the thinking fields. At this scale, smaller models didn't reliably learn to emit those traces. But requiring them during generation still improved the data, which is what mattered.
 
-## The Constraint That Changed Everything
+## The constraint that changed everything
 
 Early generations were accurate but lifeless. "Nietzsche believed X because Y, as evidenced by Z."
 
@@ -115,57 +130,57 @@ Technically correct. Philosophically dead.
 
 The model was drawing on its general knowledge of Nietzsche rather than engaging with the specific chapter text in front of it.
 
-The solution: every answer must be grounded in the specific chapter being discussed. Not general knowledge about Nietzsche's philosophy. *This chapter*. These passages. These arguments.
+The fix was a hard constraint: every answer must be grounded in the specific chapter being discussed. Not generic Nietzsche lore. This chapter. These passages. These arguments.
 
 This seems limiting. Why not let the model draw on everything?
 
-Because I wasn't building a Nietzsche encyclopedia. I was teaching the model to read closely and argue from text. The constraint forces specificity over generality. The model can't fall back on "Nietzsche generally believed..." It must say "In this chapter, when Nietzsche describes..."
+Because I wasn't building a Nietzsche encyclopedia. I wanted a model that reads closely and argues from text. The constraint forces specificity. The model can't hide behind "Nietzsche generally believed..." It has to say "In this chapter, when Nietzsche describes..."
 
-This constraint also prevents collapse. Without it, the model defaults to its pre-training knowledge—generic assistant mode. With it, the model must engage with the specific argument in front of it.
+This constraint also prevents collapse. Without it, the model defaults to its pre-training knowledge, in generic assistant mode. With it, the model must engage with the specific argument in front of it.
 
-## Voice As a Forcing Function
+## Voice as a forcing function
 
 I don't ask the model to explain Nietzsche's ideas. I ask it to respond *as Nietzsche*, in his voice.
 
-This isn't cosplay. It's a forcing function for authenticity.
+This isn't cosplay. It's a forcing function.
 
 "Explain this concept" → model reaches for clear, helpful, neutral.
-"Respond as Nietzsche" → model must attend to tone, cadence, rhetorical strategy, emotional register.
+"Respond as Nietzsche" → the model has to pay attention to tone, cadence, and rhetorical habits.
 
 The model learns that Nietzsche doesn't just present arguments. He provokes. Challenges. Uses metaphor. Deploys irony. The Nietzsche model should feel different from a Kant model, not just in content but in how it argues.
 
-And the 80-150 word constraint matters more than it seems. Too short = shallow. Too long = meandering. That range forces substantive but disciplined responses. Every sentence must earn its place.
+And the 80-150 word constraint matters more than it sounds. Too short gets shallow. Too long wanders. That window forces dense, disciplined answers where every sentence has to work.
 
 It also matches how humans actually engage with philosophical ideas. You don't deliver lectures in conversation. You give focused responses that address the specific question while showing depth.
 
-## What I Learned (After 4,500 Q&A Pairs)
+## What I learned (after 4,500 Q&A pairs)
 
-**1. Small models can capture voice surprisingly well.**
-A 4B parameter model can sound distinctly Nietzschean. It won't have encyclopedic knowledge, but within its domain, it argues with genuine style.
+**1. Small models can learn voice.**
+A 4B parameter model can sound distinctly Nietzschean. It won't be an encyclopedia, but within the domain it can argue with a recognizable style.
 
-**2. Cognitive diversity beats data volume.**
-100 questions spanning all five layers teaches more than 1,000 semantic questions. The model needs examples of different types of thinking, not just more examples of the same type.
+**2. Cognitive diversity beats sheer volume.**
+100 questions spanning the layers taught more than 1,000 semantic questions. The model needed examples of different *kinds* of thinking, not more of the same.
 
 **3. The first dataset had 60% semantic questions.**
-Models trained on it learned to explain concepts brilliantly but never learned to argue, provoke, or react emotionally. We had cognitive monoculture. One type of thinking, repeated thousands of times.
+Models trained on that learned to explain concepts but didn't learn to argue, provoke, or react. It was cognitive monoculture: one mode of thought, repeated until it became the only mode.
 
 The fix: explicit percentage distributions enforced at generation time. Calculate how many questions of each layer per chapter. Build categorization into the pipeline. Don't hope for natural balance.
 
-**4. Early thinking fields were empty or generic.**
+**4. Early thinking fields were empty.**
 "The reader is asking about X. I will explain X." Useless.
 
-The fix: separate the three components. Give specific instructions for each. Question analysis: what's the reader *really* asking? Textual grounding: which passages inform this? Reasoning approach: what argumentative strategy?
+The fix: separate the three components and give each real constraints. Question analysis: what is the reader *really* asking? Textual grounding: which passages matter? Reasoning approach: what's the argumentative plan?
 
 Quality improved dramatically.
 
-**5. Voice and reasoning are separable skills.**
+**5. Voice and reasoning are separable.**
 Some models nail the tone but flub the logic. Others argue correctly but sound generic. You need both. Procedural questions for reasoning, voice constraints for style.
 
-## Why This Matters Beyond Nietzsche
+## Why this matters beyond Nietzsche
 
-Tome Forge was built using Nietzsche's works, but the framework is designed for any author.
+Tome Forge started with Nietzsche, but the scheme is meant to carry over to other writers.
 
-The goal: models that don't just know what someone said, but think in their particular way.
+The goal is a model that doesn't just know what someone said, but can think in their particular way.
 
 A Dostoevsky model that develops ideas through character consciousness and psychological depth. A Kant model that builds systematic architectures. An Emerson model that works through metaphor and aphoristic style.
 
@@ -178,17 +193,17 @@ The pattern stays the same:
 
 The framework adapts. Narrative thinkers like Dostoevsky: emphasize episodic and emotional layers to capture psychological development. Systematic thinkers like Kant: procedural and structural layers dominate. Poetic thinkers like Emerson: emotional and episodic layers for aphoristic style.
 
-The five-layer structure provides scaffolding. You adjust the weights to match the author's cognitive signature.
+The five-layer structure is scaffolding. You tune the weights to match the author's cognitive signature.
 
-Beyond philosophy: legal reasoning, strategic planning, creative writing, scientific argumentation. Anywhere thinking style matters as much as content.
+And this isn't just philosophy: legal reasoning, strategic planning, scientific argumentation, anywhere thinking style matters as much as content.
 
-## The Evaluation Problem (Still Unsolved)
+## The evaluation problem (still unsolved)
 
 This might be the hardest problem in the entire pipeline.
 
 How do you know if a philosophical model is good?
 
-Standard metrics fail.
+Standard metrics don't help much here.
 
 I developed a qualitative framework:
 1. Factual accuracy (no invented citations)
@@ -199,7 +214,7 @@ I developed a qualitative framework:
 
 The Thucydides/Plato test became canonical. A model that hedges fails. A model that chooses decisively and argues vigorously succeeds.
 
-But this is subjective and doesn't scale. I can manually evaluate 50 responses. Not 5,000.
+But it's subjective and it doesn't scale. I can manually judge 50 responses, not 5,000.
 
 Philosophy isn't just about getting answers right. It's about arguing well. Making distinctions. Challenging assumptions. Following implications. These are qualitative judgments that resist quantification.
 
@@ -210,11 +225,11 @@ We need frameworks that measure:
 - Quality of analogies and examples
 - Skillful use of dialectical moves
 
-Until we solve evaluation, we're flying partially blind. I can see that fine-tuned models *feel* more authentic, more engaged, more philosophically alive. But I can't measure it precisely.
+Until evaluation gets better, you're partly flying blind. I can tell the fine-tuned models *feel* more authentic and more engaged. I can't score that cleanly.
 
 The evaluation problem remains open.
 
-## Open Questions
+## Open questions
 
 **How much data is enough?**
 I generated 4,500 pairs. Would 10,000 be substantially better? Is there a point of diminishing returns?
@@ -231,17 +246,17 @@ I tested 1B and 4B parameters. Can you go smaller? At what point does architectu
 **Can models learn to produce thinking fields?**
 Training smaller models to reliably generate analysis/grounding/plan fields, not just final answers.
 
-## What's Next
+## What's next
 
-The code is open. The data is open. The models are open.
+The code, data, and models are open.
 
-The real contribution isn't the implementation. It's the framework for thinking about what makes training data philosophically rich.
+The real contribution (if there is one) isn't the implementation. It's a way of thinking about what makes training data philosophically rich.
 
-If you're building models that need to do more than retrieve and rephrase—that need to argue, persuade, think with distinctive voice—maybe these principles help.
+If you're building models that need to do more than retrieve and rephrase, models that need to argue and keep a distinct voice, maybe this helps.
 
 The question isn't whether machines can think. It's whether we can teach them to think *well*, in the particular ways we care about.
 
-I haven't scratched the surface. There are numerous aspects I didn't cover. Adaptation to other domains. Better evaluation frameworks. How far this scales. What happens with even smaller models.
+I haven't scratched the surface. I didn't cover adaptation to other domains, better evaluation, how far this scales, what happens when you go even smaller.
 
 But the core insight stands: essence is what survives compression. If you can identify what humans remember and how they remember it, you can build training data that teaches models to think, not just to know.
 

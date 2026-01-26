@@ -14,9 +14,9 @@
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
       <guid>http://localhost:1313/posts/tome-forge/</guid>
       <description>&lt;h1 id=&#34;tome-forge-teaching-llms-to-think-like-philosophers&#34;&gt;Tome Forge: Teaching LLMs to Think Like Philosophers&lt;/h1&gt;
-&lt;h2 id=&#34;the-problem-and-how-i-found-it&#34;&gt;The Problem (And How I Found It)&lt;/h2&gt;
-&lt;p&gt;I thought I had a clever prompt. Ask a language model to roleplay as Nietzsche, then test it with a simple question: Thucydides or Plato?&lt;/p&gt;
-&lt;p&gt;Any Nietzsche reader knows the answer before they finish the question. He hated Plato. Called him a coward. His own words: &lt;em&gt;&amp;ldquo;My recreation, my preference, my cure from all Platonism has always been Thucydides&amp;hellip; Courage in the face of reality distinguishes a man like Thucydides from Plato: Plato is a coward before reality, consequently he flees into the ideal.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;the-problem-and-how-i-tripped-over-it&#34;&gt;The problem (and how I tripped over it)&lt;/h2&gt;
+&lt;p&gt;I thought I had a clever prompt. Tell a model to roleplay as Nietzsche, then poke it with a softball: Thucydides or Plato?&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve read even a little Nietzsche, you can answer before you finish the question. He loathed Plato. He called him a coward. In his own words: &lt;em&gt;&amp;ldquo;My recreation, my preference, my cure from all Platonism has always been Thucydides&amp;hellip; Courage in the face of reality distinguishes a man like Thucydides from Plato: Plato is a coward before reality, consequently he flees into the ideal.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Red Wheelbarrow</title>
