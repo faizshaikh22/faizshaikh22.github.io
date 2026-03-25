@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-23T21:30:00+05:30</lastmod>
+    <lastmod>2026-03-25T17:03:07+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-03-25T17:03:07+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/vaudeville-ubermensch/</loc>
+    <lastmod>2026-03-25T17:03:07+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/thoughts/hello-world/</loc>
     <lastmod>2026-01-23T21:30:00+05:30</lastmod>
@@ -27,9 +33,6 @@
     <lastmod>2025-11-16T21:37:03+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/philosophy/</loc>
-    <lastmod>2025-11-16T21:37:03+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-11-16T21:37:03+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
