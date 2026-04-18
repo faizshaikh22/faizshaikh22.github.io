@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Faiz Blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Nov 2025 21:37:03 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 17:03:07 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brothers-Karamazov</title>
+      <link>http://localhost:1313/tags/brothers-karamazov/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/brothers-karamazov/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dostoevsky</title>
+      <link>http://localhost:1313/tags/dostoevsky/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/dostoevsky/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ivan-Karamazov</title>
+      <link>http://localhost:1313/tags/ivan-karamazov/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/ivan-karamazov/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Literary-Analysis</title>
+      <link>http://localhost:1313/tags/literary-analysis/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/literary-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nietzsche</title>
+      <link>http://localhost:1313/tags/nietzsche/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/nietzsche/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Philosophy</title>
+      <link>http://localhost:1313/tags/philosophy/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Übermensch</title>
+      <link>http://localhost:1313/tags/%C3%BCbermensch/</link>
+      <pubDate>Wed, 25 Mar 2026 17:03:07 +0530</pubDate>
+      <guid>http://localhost:1313/tags/%C3%BCbermensch/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
@@ -34,20 +83,6 @@
       <link>http://localhost:1313/tags/llm/</link>
       <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
       <guid>http://localhost:1313/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nietzsche</title>
-      <link>http://localhost:1313/tags/nietzsche/</link>
-      <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:1313/tags/nietzsche/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Philosophy</title>
-      <link>http://localhost:1313/tags/philosophy/</link>
-      <pubDate>Sun, 16 Nov 2025 21:37:03 +0530</pubDate>
-      <guid>http://localhost:1313/tags/philosophy/</guid>
       <description></description>
     </item>
     <item>

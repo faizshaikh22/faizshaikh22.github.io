@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-content",
+      "type": "skill-md",
+      "description": "Explains how to read the site's public writing through sitemap.xml, index.json, and canonical page URLs.",
+      "url": "https://faizshaikh.xyz/.well-known/agent-skills/site-content/SKILL.md",
+      "digest": "sha256:71b8b0d33815df81c833c0a0744c78f7adf719f23f8e2838c336975dcab37a1d"
+    }
+  ]
+}

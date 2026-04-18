@@ -127,4 +127,4 @@ buildExpired = false
     tabWidth = 4
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "ROBOTS"]

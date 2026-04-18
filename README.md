@@ -105,6 +105,43 @@ In GitHub:
   - Custom domain: `faizshaikh.xyz`
   - Enable **Enforce HTTPS**
 
+## Agent-readable surface
+
+These endpoints exist for crawlers, search systems, and agent tooling:
+
+- `/robots.txt`
+- `/sitemap.xml`
+- `/index.json`
+- `/index.xml`
+- `/.well-known/agent-skills/index.json`
+- `/.well-known/agent-skills/site-content/SKILL.md`
+
+Notes:
+
+- `robots.txt` is generated from `layouts/robots.txt`, not from the theme default.
+- `index.json` is Hugo's search index. It is useful as a compact content corpus, but it is not an API.
+- `.well-known/agent-skills/` exists so agents can discover how to consume the site's public writing.
+
+## What this site does not expose
+
+These suggestions were intentionally skipped because they do not match this repo's shape:
+
+- `/.well-known/api-catalog`: no application API on this domain
+- `/.well-known/openid-configuration`: no OpenID Connect issuer
+- `/.well-known/oauth-authorization-server`: no OAuth authorization server
+- `/.well-known/oauth-protected-resource`: no protected resource metadata to publish
+- `/.well-known/mcp/server-card.json`: no MCP server is running for this site
+- WebMCP: this is a static content site, not an in-browser tool surface
+
+## Hosting limits
+
+This site is deployed on GitHub Pages. That matters for two of the agent-readiness checks:
+
+- `Link` response headers on `/` are deferred because GitHub Pages does not give you a clean way to attach arbitrary response headers.
+- Markdown negotiation for `Accept: text/markdown` is also deferred because it needs request-time content negotiation and custom response headers.
+
+If you later move the custom domain behind Cloudflare or another programmable edge, those two features can be added there without changing the Hugo content model.
+
 ## Analytics (GA4)
 
 GA4 Measurement ID is configured in `hugo.toml`:
